@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Table</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        table{
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        tr{
+            padding: 6px;
+            border: 1px solid #dddddd;
+        }
+        th{
+            background-color: rgb(100, 100, 201);
+            padding: 10px;
+        }
+        td{
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>PRODUCT TABLE</h1>
+    <table>
+        <tr>
+            <th>Product_id</th>
+            <th>Product_type</th>
+            <th>Product_name</th>
+            <th>Product_price</th>
+            <th>Available_quantity</th>
+        </tr>
+        <% database.forEach((data)=>{ %>
+            <tr>
+                <td> <%= data.product_id %> </td>
+                <td> <%= data.product_type %> </td>
+                <td> <%= data.product_name %> </td>
+                <td> <%= data.product_price %> </td>
+                <td> <%= data.available_quantity %> </td>
+            </tr>
+        <% }); %>
+    </table>
+</body>
+</html>
